@@ -109,7 +109,7 @@ button {
         display: inline-block;
         width: 25px;
         height: 18px;
-        background-color: #bed8d4;
+        background-color: transparent;
         background-attachment: scroll;
         background-repeat: no-repeat;
         background-position: -5px 1px;
@@ -608,4 +608,4 @@ button {
     height: 93px;
     width: 139px; } }
 
-/*# sourceMappingURL=fs2.css.map */
+/*# sourceMappingURL=fs.css.map */
