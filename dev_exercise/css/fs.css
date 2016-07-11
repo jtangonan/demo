@@ -47,7 +47,8 @@ button {
   -webkit-margin-before: 0em;
   -webkit-margin-after: 0em;
   margin-bottom: 50px;
-  padding-left: 0px; }
+  padding-left: 0px;
+  white-space: nowrap; }
   .fs-navbar-nav li {
     list-style: inside;
     list-style-type: none;
