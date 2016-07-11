@@ -1,0 +1,98 @@
+<html ng-app="recipeApp">
+    <head>
+        <title>food sense</title>
+        <link type="text/css" rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css"/>
+        <link href='https://fonts.googleapis.com/css?family=PT+Serif:400,400italic' rel='stylesheet' type='text/css' />
+        <link type="text/css" rel="stylesheet" href="css/fs2.css" />
+        <script type="text/javascript" src="lib/angular/angular.min.js"></script>
+        <script type="text/javascript" src="lib/angular/angular-resource.min.js"></script>
+        <script type="text/javascript" src="lib/jquery/jquery-2.2.4.min.js"></script>
+        <script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="app/app.js"></script>
+        <script type="text/javascript" src="app/controllers/recipeController.js"></script>
+    </head>
+    <body>
+        <div class="page">
+
+        <div class="fs-navbar">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="fs-navbar-header">
+                <div class="fs-logo"></div>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="fs-navbar-links">
+                <ul class="fs-navbar-nav">
+                    <li><a href="#" class="fs-nav-link tastemakers"></a><a href="#" class="fs-nav-link-text">Tastemakers</a></li>
+                    <li><a href="#" class="fs-nav-link blog"></a><a href="#" class="fs-nav-link-text">Blog</a></li>
+                    <li><a href="#" class="fs-nav-link a-list"></a><a href="#" class="fs-nav-link-text">The A-List</a></li>
+                    <li><a href="#" class="fs-nav-link contribute"></a><a href="#" class="fs-nav-link-text">Contribute</a></li>
+                    <li><a href="#" class="fs-nav-link about"></a><a href="#" class="fs-nav-link-text">About</a></li>
+                </ul>
+                <div class="social-bar">
+                    <section>
+                        <header>Latest Tweets</header>
+                        <article class="cool-link"><a href="#" class="image img-twitter"></a><a href="#">Join the Conversation</a></article>
+                    </section>
+                    <section>
+                        <header>Let's Be Friends</header>
+                        <article>For weekly finds, community recommendations, and more, like us on Facebook.</article>
+                        <article class="cool-link"><a href="#" class="image img-facebook"></a><a href="#">Join the Community</a></article>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+
+            <div class="splash">
+                <div class="splash-image">
+                    <div class="splash-photo"></div>
+                    <div class="splash-title">What's Cooking?</div>
+                    <div class="splash-subtitle">Browse our gallery for dependably delicious recipes.</div>
+                    <div class="splash-photo-credits">photo by Clare Barboza</div>
+                </div>
+                <div class="splash-nav">
+                    <ul>
+                        <li class="active">Tastemakers<span class="splash-nav-link-comment">Feast your eyes & get recipes!</span></li>
+                        <li>Blog<span class="splash-nav-link-comment">News, how-tos, stories, and more</span></li>
+                        <li>The A-List<span class="splash-nav-link-comment">Handpicked, absolute favorites</span></li>
+                        <li>Contribute<span class="splash-nav-link-comment">We want to hear from you!</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="subscribe">
+                <div class="sign-up">Sign up for our newsletter to receive a handpicked selection of the best stories, recipes, and news, delivered weekly to your inbox.</div>
+                <div class="input"><form><input class="e-mail" type="text" placeholder="Email"/><button class="subscribe-btn" type="button">Subscribe</button></form></div>
+            </div>
+
+            <div class="recipes" ng-controller="RecipeController">
+                <div class="recipe" ng-repeat="r in recipes">
+                    <div class="recipe-image"><img ng-src="images/{{ r.image }}" /></div>
+                    <h1>{{ r.title }}</h1>
+                    <p>{{ r.summary }}</p>
+                    <p><span class="recipe-date">{{ r.date }}&nbsp;/&nbsp;</span><a class="recipe-read-link">Read <span class="chevron">>></span></a></p>
+                </div>
+                <!-- button ng-click="addRecipe({title:'Hello', summary:'World!'});">Add</button -->
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <hr/>
+            <div class="left">
+                <a href="#">Privacy Policy</a>|<a href="#">Terms of Use</a>|<a href="#">Contact</a><br/>
+                <p><span class="glyphicon glyphicon-copyright-mark" aria-hidden="true"></span>&nbsp;2015 Food Sense, all rights reserved.</p>
+            </div>
+            <div class="right">
+                <a href="#" title="Twitter"><div class="social-icon img-twitter"></div></a>
+                <a href="#" title="Facebook"><div class="social-icon img-facebook"></div></a>
+                <a href="#" title="RSS Feed"><div class="social-icon img-rss"></div></a>
+            </div>
+        </div>
+
+        </div>
+
+    </body>
+</html>
